@@ -1,0 +1,21 @@
+[build]
+  command = "yarn build"
+  publish = "build"
+
+[[redirects]]
+  from = "https://velvetech-react-aleksey-vl-ivanov.netlify.app/*"
+  to = "https://velvetech-react.aleksey-vl-ivanov.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://velvetech-react-aleksey-vl-ivanov.netlify.app/*"
+  to = "https://velvetech-react.aleksey-vl-ivanov.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://velvetech-react.aleksey-vl-ivanov.com/*"
+  to = "https://velvetech-react.aleksey-vl-ivanov.com/:splat"
+  status = 301
+  force = true
