@@ -1,6 +1,6 @@
 import BlockItem from './BlockItem';
 
-function BlockSection({ blocks, handlers }) {
+function BlockSection({ blocks, activeId, handlers }) {
   const { deleteBlock, setActiveBlock } = handlers;
 
   return (
@@ -9,6 +9,7 @@ function BlockSection({ blocks, handlers }) {
         <BlockItem
           key={block.id}
           block={block}
+          active={block.id === activeId}
           deleteBlock={deleteBlock}
           setActiveBlock={setActiveBlock}
         />

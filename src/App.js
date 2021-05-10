@@ -80,6 +80,7 @@ function App() {
             <div className="col-8">
               <BlockSection
                 blocks={blocks}
+                activeId={params.id}
                 handlers={{
                   deleteBlock,
                   setActiveBlock,

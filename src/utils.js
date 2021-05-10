@@ -17,7 +17,7 @@ export const DUMMY_DATA = [
     id: getNextId(),
     text:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, doloremque. Soluta laudantium, hic distinctio sit, iusto rem dolores delectus dignissimos minima quaerat, nam ut sapiente corrupti quos modi animi. Assumenda.',
-    size: 24,
+    size: 16,
     color: '#ff0000',
     bgColor: '#000000',
   },
@@ -25,7 +25,7 @@ export const DUMMY_DATA = [
     id: getNextId(),
     text:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt adipisci ratione quam inventore reiciendis necessitatibus numquam? Consequatur nulla ipsa commodi.',
-    size: 24,
+    size: 32,
     color: '#0000ff',
     bgColor: '#ffff00',
   },

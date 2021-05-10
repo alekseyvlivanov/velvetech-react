@@ -1,4 +1,4 @@
-function BlockItem({ block, deleteBlock, setActiveBlock }) {
+function BlockItem({ block, active, deleteBlock, setActiveBlock }) {
   const { id, text, size, color, bgColor } = block;
 
   const deleteBlockHandler = () => {
@@ -10,7 +10,7 @@ function BlockItem({ block, deleteBlock, setActiveBlock }) {
   };
 
   return (
-    <div className="card card-body">
+    <div className={`card card-body ${active ? 'border-primary' : ''}`}>
       <button
         type="button"
         className="btn btn-danger btn-sm mb-2"
