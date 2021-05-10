@@ -24,6 +24,9 @@ function App() {
 
   const deleteBlock = (id) => {
     setBlocks(blocks.filter((block) => block.id !== id));
+    if (params.id === id) {
+      setParams({ ...params, id: null });
+    }
     notyf.success('Block deleted');
   };
 
