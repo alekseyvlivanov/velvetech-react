@@ -1,9 +1,21 @@
-function BlockItem({ block }) {
-  const { text, size, color, bgColor } = block;
+function BlockItem({ block, deleteBlock, setActiveBlock }) {
+  const { id, text, size, color, bgColor } = block;
+
+  const deleteBlockHandler = () => {
+    deleteBlock(id);
+  };
+
+  const setActiveBlockHandler = () => {
+    setActiveBlock(block);
+  };
 
   return (
     <div className="card card-body">
-      <button type="button" className="btn btn-danger btn-sm mb-2">
+      <button
+        type="button"
+        className="btn btn-danger btn-sm mb-2"
+        onClick={deleteBlockHandler}
+      >
         Delete block
       </button>
       <blockquote
@@ -14,6 +26,7 @@ function BlockItem({ block }) {
           backgroundColor: bgColor,
           cursor: 'pointer',
         }}
+        onClick={setActiveBlockHandler}
       >
         {text}
       </blockquote>

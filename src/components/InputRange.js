@@ -1,4 +1,8 @@
-function InputRange({ label, value, min, max }) {
+function InputRange({ label, value, min, max, changeSize }) {
+  const changeSizeHandler = (e) => {
+    changeSize(parseInt(e.target.value, 10));
+  };
+
   return (
     <div className="mb-3">
       <label className="form-label d-block">
@@ -9,6 +13,7 @@ function InputRange({ label, value, min, max }) {
           value={value}
           min={min}
           max={max}
+          onChange={changeSizeHandler}
         />
       </label>
     </div>
