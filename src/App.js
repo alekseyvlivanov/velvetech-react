@@ -34,32 +34,38 @@ function App() {
     setParams(block);
   };
 
-  const updateActiveBlock = () => {
-    if (params.id) {
+  const updateActiveBlock = (updatedBlock) => {
+    if (params.id !== null) {
       setBlocks(
-        blocks.map((block) => (block.id !== params.id ? block : { ...params })),
+        blocks.map((block) =>
+          block.id !== updatedBlock.id ? block : updatedBlock,
+        ),
       );
     }
   };
 
   const changeText = (text) => {
-    setParams({ ...params, text });
-    updateActiveBlock();
+    if (text.trim() === '') {
+      notyf.error('Enter something for text');
+    } else {
+      setParams({ ...params, text });
+      updateActiveBlock({ ...params, text });
+    }
   };
 
   const changeSize = (size) => {
     setParams({ ...params, size });
-    updateActiveBlock();
+    updateActiveBlock({ ...params, size });
   };
 
   const changeColor = (color) => {
     setParams({ ...params, color });
-    updateActiveBlock();
+    updateActiveBlock({ ...params, color });
   };
 
   const changeBgColor = (bgColor) => {
     setParams({ ...params, bgColor });
-    updateActiveBlock();
+    updateActiveBlock({ ...params, bgColor });
   };
 
   return (
