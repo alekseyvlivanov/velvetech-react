@@ -1,9 +1,11 @@
+import { nanoid } from 'nanoid';
+
 import BlockSection from './components/BlockSection';
 import ControlForm from './components/ControlForm';
 
 const DUMMY_DATA = [
   {
-    id: 1,
+    id: nanoid(),
     text:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, doloremque. Soluta laudantium, hic distinctio sit, iusto rem dolores delectus dignissimos minima quaerat, nam ut sapiente corrupti quos modi animi. Assumenda.',
     size: 24,
@@ -11,7 +13,7 @@ const DUMMY_DATA = [
     bgColor: 'black',
   },
   {
-    id: 2,
+    id: nanoid(),
     text:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, maiores?',
     size: 32,
@@ -19,7 +21,7 @@ const DUMMY_DATA = [
     bgColor: 'white',
   },
   {
-    id: 3,
+    id: nanoid(),
     text:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt adipisci ratione quam inventore reiciendis necessitatibus numquam? Consequatur nulla ipsa commodi.',
     size: 24,
@@ -29,8 +31,11 @@ const DUMMY_DATA = [
 ];
 
 const DEFAULT_VALUES = {
+  id: null,
   text: '',
-  size: '24',
+  size: 24,
+  minSize: 8,
+  maxSize: 64,
   color: '#000000',
   bgColor: '#ffffff',
 };
